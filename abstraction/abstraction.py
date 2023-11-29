@@ -17,20 +17,25 @@ first.Add()
 second.Sub()
 '''
 #Another moethod using abstract class
+'''
+1. Object can't be created for abstract class. 
+2. object can be created for concrete class. 
+3. Decorator: It allow programmer to modify the behaviour of a function or class, whithout permanently modifying. Syntax:-@name
+'''
 
 
 from abc import ABC,abstractmethod
 
-class Car(ABC):
+class Car(ABC):  #Abstract Class : Which have abstract method. 
     def show(self):
         print("Every car has a 4 wheels")
-    @abstractmethod
+    @abstractmethod   #Abstract Method: Method with declaration but not the defination. 
     def Speed(self):
         pass
-class Maruti(Car):
+class Maruti(Car):    #Concrete Class
     def Speed(self):
         print("Speed is 100km/h")
-class Suzuki(Car):
+class Suzuki(Car):    #Concrete Class: Class which doesn't have any abstract method. 
     def Speed(self):
         print("Speed is 70km/h")
 obj=Maruti()
